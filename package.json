@@ -1,14 +1,21 @@
 {
-  "dependencies": {
-    "marked": "^4.3.0",
-    "next": "^13.3.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+  "name": "my-nextjs-package",
+  "version": "1.0.0",
+  "description": "My Next.js package with NextRouter",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "next build && babel src --out-dir dist --copy-files",
+    "prepublishOnly": "npm run build",
+    "dev": "next dev"
   },
-  "name": "next-router-demo",
-  "version": "1.1.12",
-  "main": "dist/MyComponent.js",
-  "module": "dist/MyComponent.js",
+  "peerDependencies": {
+    "next": "^12.0.0",
+    "react": "^17.0.0"
+  },
   "devDependencies": {
     "@babel/cli": "^7.16.0",
     "@babel/core": "^7.16.0",
@@ -19,22 +26,13 @@
     "next": "^11.1.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "webpack": "^5.58.1",
+    "webpack-cli": "^4.9.1"
   },
-  "scripts": {
-    "build": "next build && babel src --out-dir dist --copy-files",
-    "prepublishOnly": "npm run build",
-    "dev": "next dev"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tffaruk/next-tina-seo.git"
-  },
-  "author": "faruk",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/tffaruk/next-tina-seo/issues"
-  },
-  "homepage": "https://github.com/tffaruk/next-tina-seo#readme",
-  "description": "## Dependency"
+  "dependencies": {
+    "next": "^13.3.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
 }
