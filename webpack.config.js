@@ -1,56 +1,36 @@
-const path = require("path");
+const path = require('path');
 
 module.exports = {
-  mode: "production",
-  entry: "./index.js",
+  mode: 'production',
+  entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "dist/NextTinaSeo.js",
-    library: "NextTinaSeo",
-    libraryTarget: "umd",
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'index.js',
+    libraryTarget: 'umd',
+    globalObject: 'this',
     umdNamedDefine: true,
-  },
-  externals: {
-    react: "react",
-    "react-dom": "react-dom",
-    next: "next",
   },
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: ["@babel/preset-env", "@babel/preset-react"],
-          },
-        },
+        use: ['babel-loader'],
       },
     ],
-  },
-  resolve: {
-    extensions: ['.js', '.jsx'],
-    alias: {
-      react: path.resolve(__dirname, './node_modules/react'),
-      'react-dom': path.resolve(__dirname, './node_modules/react-dom'),
-      'next/router': path.resolve(__dirname, './node_modules/next/dist/client/router'),
-    },
   },
   externals: {
     react: {
       commonjs: 'react',
       commonjs2: 'react',
-      amd: 'React',
+      amd: 'react',
       root: 'React',
     },
-    'react-dom': {
-      commonjs: 'react-dom',
-      commonjs2: 'react-dom',
-      amd: 'ReactDOM',
-      root: 'ReactDOM',
+    next: {
+      commonjs: 'next',
+      commonjs2: 'next',
+      amd: 'next',
+      root: 'Next',
     },
-    'next/router': 'next/router',
   },
 };
-

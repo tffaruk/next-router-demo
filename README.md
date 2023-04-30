@@ -1,18 +1,18 @@
-# Next Tina Seow
+# Next Router Demo
 
 ## Dependency
 
 - node v18+
 - npm v9+
 - next v13+
-- tailwind v3+
+
 
 ## Install 
 
 ```
-npm install next-tina-seo-demo
+npm install next-router-demo
             or
-yarn add next-tina-seo-demo
+yarn add next-router-demo
 ```
 
 

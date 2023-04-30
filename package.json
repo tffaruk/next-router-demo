@@ -5,7 +5,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
-  "name": "next-tina-seo-demo",
+  "name": "next-router-demo",
   "version": "1.1.11",
   "main": "dist/NextTinaSeo.js",
   "module": "dist/NextTinaSeo.js",
@@ -30,11 +30,11 @@
     "type": "git",
     "url": "git+https://github.com/tffaruk/next-tina-seo.git"
   },
-  "author": "",
+  "author": "faruk",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/tffaruk/next-tina-seo/issues"
   },
   "homepage": "https://github.com/tffaruk/next-tina-seo#readme",
-  "description": ""
+  "description": "## Dependency"
 }
